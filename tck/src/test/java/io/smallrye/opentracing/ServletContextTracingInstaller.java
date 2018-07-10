@@ -27,10 +27,8 @@ public class ServletContextTracingInstaller implements ServletContextListener {
     Dynamic filterRegistration = servletContext
         .addFilter("tracingFilter", new SpanFinishingFilter(tracer));
     filterRegistration.setAsyncSupported(true);
-    filterRegistration.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST,
-        DispatcherType.FORWARD,
-        DispatcherType.ASYNC,
-        DispatcherType.INCLUDE), false, "*");
+    filterRegistration.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class),
+  true, "*");
   }
 
   @Override
