@@ -1,0 +1,18 @@
+<suite name="MicroProfile OpenTracing TCKs" verbose="1" preserve-order="true" configfailurepolicy="continue" >
+
+  <test name="microprofile-opentracing TCK">
+    <packages>
+      <package name="org.eclipse.microprofile.opentracing.tck.*" />
+    </packages>
+
+    <classes>
+      <class
+        name="org.eclipse.microprofile.opentracing.tck.OpentracingClientTests">
+        <methods>
+          <!-- TODO remove - https://github.com/smallrye/smallrye-opentracing/issues/5 -->
+          <exclude name="testAsyncLocalSpan" />
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
