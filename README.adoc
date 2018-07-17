@@ -12,3 +12,12 @@ Debug can be enabled in `arquillian.xml` configuration file.
 ```bash
 mvn clean install
 ```
+
+=== License
+
+All files in the repository contains license header. Following commands help with
+license header issues:
+
+* `mvn license:format` - format or add license headers
+* `mvn -Dlicense.skip=true` - skip license validation
+
