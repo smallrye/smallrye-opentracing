@@ -6,7 +6,7 @@
   <parent>
     <artifactId>smallrye-opentracing-parent</artifactId>
     <groupId>io.smallrye</groupId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>smallrye-opentracing</artifactId>
