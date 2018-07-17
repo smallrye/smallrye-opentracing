@@ -19,7 +19,7 @@
   </scm>
 
   <modules>
-    <module>smallrye-opentracing</module>
+    <module>implementation</module>
     <module>tck</module>
   </modules>
 
