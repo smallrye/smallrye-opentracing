@@ -1,3 +1,18 @@
+<!--
+
+    Copyright 2018 The SmallRye Authors
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+    in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software distributed under the License
+    is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+    or implied. See the License for the specific language governing permissions and limitations under
+    the License.
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -23,7 +38,11 @@
     <module>tck</module>
   </modules>
 
+  <inceptionYear>2018</inceptionYear>
+
   <properties>
+    <!-- for license header, it has to be set in all submodules -->
+    <main.basedir>${project.basedir}</main.basedir>
     <version.microprofile.opentracing>1.1</version.microprofile.opentracing>
     <version.opentracing>0.31.0</version.opentracing>
     <verion.opentracing.jaxrs>0.1.6</verion.opentracing.jaxrs>
@@ -33,6 +52,9 @@
     <version.wildfly>13.0.0.Final</version.wildfly>
     <version.arquillian>1.4.0.Final</version.arquillian>
     <version.arquillian.wildfly>2.1.0.Final</version.arquillian.wildfly>
+
+    <!-- plugins -->
+    <version.maven-license-plugin>3.0</version.maven-license-plugin>
   </properties>
 
   <dependencyManagement>
@@ -63,4 +85,48 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.mycila</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>${version.maven-license-plugin}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>${version.maven-license-plugin}</version>
+        <configuration>
+          <header>${main.basedir}/header.txt</header>
+          <failIfMissing>true</failIfMissing>
+          <failIfUnknown>true</failIfUnknown>
+          <excludes>
+            <exclude>**/README.adoc</exclude>
+            <exclude>LICENSE</exclude>
+          </excludes>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.mycila</groupId>
+            <artifactId>license-maven-plugin-git</artifactId>
+            <version>${version.maven-license-plugin}</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>compile</phase>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
