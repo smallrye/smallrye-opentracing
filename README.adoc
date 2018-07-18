@@ -3,12 +3,61 @@ image:https://img.shields.io/github/license/smallrye/smallrye-opentracing.svg["L
 
 = SmallRye OpenTracing
 
-SmallRye OpenTracing is an implementation of https://github.com/eclipse/microprofile-opentracing.
+SmallRye OpenTracing is an implementation of https://github.com/eclipse/microprofile-opentracing meant
+to be reusable for different vendors.
+
+== How to use
+
+The following components have to be added to deployment to pass `microprofile-opentracing-tck`:
+
+=== Server side JAX-RS
+
+Server side JAX-RS tracing integration is provided by JAX-RS `SmallRyeTracingDynamicFeature` and
+servlet filter `SpanFinishingFilter` which finishes the span started in JAX-RS filter.
+
+The installation is JAX-RS and server implementation specific.
+For example in RestEasy `DynamicFeature` it can be enabled by specifying
+`resteasy.providers` in servlet context init parameters. The following code snippet demonstrates
+possible installation.
+
+```java
+public class ServletContextTracingInstaller implements ServletContextListener {
+
+  @Override
+  public void contextInitialized(ServletContextEvent servletContextEvent) {
+    ServletContext servletContext = servletContextEvent.getServletContext();
+    servletContext.setInitParameter("resteasy.providers", SmallRyeTracingDynamicFeature.class.getName());
+
+    Dynamic filterRegistration = servletContext.addFilter("tracingFilter", new SpanFinishingFilter(tracer));
+    filterRegistration.setAsyncSupported(true);
+    filterRegistration.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "*");
+  }
+}
+```
+
+=== Client side JAX-RS
+
+Vendor has to implement `ClientTracingRegistrarProvider` and specify it in
+`META-INF/services/org.eclipse.microprofile.opentracing.ClientTracingRegistrarProvider`.
+
+This project provides `SmallRyeClientTracingFeature` with tracing integration. The feature
+has to be registered to `ClientBuilder` in vendor specific implementation of `ClientTracingRegistrarProvider`.
+Client side tracing usually requires more components, for example OpenTracing-aware `AsyncExecutor`.
+
+=== CDI
+
+CDI tracing implementation is provided in `SmallRyeTracingCDIInterceptor`.
+This class can be loaded via vendor specific `javax.enterprise.inject.spi.Extension` implementation.
+
+=== Tracer producer
+
+Vendor has to provide CDI tracer producer. It is not provided by this library as the
+tracer resolution is not defined by MicroProfile specification.
 
 == Develop
-
-Debug can be enabled in `arquillian.xml` configuration file.
 
 ```bash
 mvn clean install
 ```
+
+Debug can be enabled in `arquillian.xml` configuration file.
