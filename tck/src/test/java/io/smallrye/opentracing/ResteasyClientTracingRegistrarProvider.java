@@ -3,7 +3,6 @@ package io.smallrye.opentracing;
 
 import io.opentracing.Tracer;
 import io.opentracing.contrib.concurrent.TracedExecutorService;
-import io.opentracing.contrib.jaxrs2.client.ClientTracingFeature.Builder;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import javax.enterprise.inject.spi.CDI;
@@ -25,8 +24,6 @@ public class ResteasyClientTracingRegistrarProvider implements ClientTracingRegi
     ResteasyClientBuilder resteasyClientBuilder = (ResteasyClientBuilder)clientBuilder;
     Tracer tracer = CDI.current().select(Tracer.class).get();
     return resteasyClientBuilder.asyncExecutor(new TracedExecutorService(executorService, tracer))
-      .register(new Builder(tracer)
-          .withTraceSerialization(false)
-          .build());
+      .register(new SmallRyeClientTracingFeature(tracer));
   }
 }

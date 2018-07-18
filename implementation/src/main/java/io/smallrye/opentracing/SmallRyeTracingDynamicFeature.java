@@ -17,7 +17,7 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class SmallRyeTracingDynamicFeature implements DynamicFeature {
 
-  private ServerTracingDynamicFeature delegate;
+  private final ServerTracingDynamicFeature delegate;
 
   public SmallRyeTracingDynamicFeature() {
     Instance<Tracer> tracerInstance = CDI.current().select(Tracer.class);
@@ -29,6 +29,6 @@ public class SmallRyeTracingDynamicFeature implements DynamicFeature {
 
   @Override
   public void configure(ResourceInfo resourceInfo, FeatureContext context) {
-     delegate.configure(resourceInfo, context);
+     this.delegate.configure(resourceInfo, context);
   }
 }
