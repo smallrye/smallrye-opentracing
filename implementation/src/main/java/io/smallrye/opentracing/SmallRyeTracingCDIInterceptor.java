@@ -62,7 +62,7 @@ public class SmallRyeTracingCDIInterceptor {
     if (methodTraced != null) {
       return methodTraced.value();
     }
-    return classTraced.value();
+    return classTraced != null ? classTraced.value() : false;
   }
 
   /**
