@@ -7,14 +7,14 @@
     </parent>
 
   <artifactId>smallrye-opentracing-parent</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <scm>
     <connection>scm:git:git@github.com:smallrye/smallrye-opentracing</connection>
     <developerConnection>scm:git:git@github.com:smallrye/smallrye-opentracing</developerConnection>
     <url>https://github.com/smallrye/smallrye-opentracing/</url>
-    <tag>1.1.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <modules>
@@ -39,12 +39,12 @@
       <dependency>
         <groupId>io.smallrye</groupId>
         <artifactId>smallrye-opentracing</artifactId>
-        <version>1.1.1</version>
+        <version>1.1.2-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>io.smallrye</groupId>
         <artifactId>smallrye-opentracing-tck</artifactId>
-        <version>1.1.1</version>
+        <version>1.1.2-SNAPSHOT</version>
       </dependency>
 
       <dependency>
