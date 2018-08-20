@@ -2,14 +2,16 @@ package io.smallrye.opentracing;
 
 import io.opentracing.Scope;
 import io.opentracing.Tracer;
-import java.lang.reflect.Method;
+import org.eclipse.microprofile.opentracing.Traced;
+
 import javax.annotation.Priority;
+import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 import javax.ws.rs.Path;
-import org.eclipse.microprofile.opentracing.Traced;
+import java.lang.reflect.Method;
 
 /**
  * @author Pavol Loffay
@@ -17,6 +19,7 @@ import org.eclipse.microprofile.opentracing.Traced;
 @Traced
 @Interceptor
 @Priority(value = Interceptor.Priority.LIBRARY_BEFORE + 1)
+@Dependent
 public class SmallRyeTracingCDIInterceptor {
 
   @Inject
