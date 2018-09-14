@@ -1,7 +1,10 @@
 package io.smallrye.opentracing.arquillian;
 
 import io.smallrye.opentracing.ExceptionMapper;
+import io.smallrye.opentracing.OpenTracingAsyncInterceptorFactory;
+import io.smallrye.opentracing.OpenTracingAsyncInterceptor;
 import io.smallrye.opentracing.OpenTracingCDIExtension;
+import io.smallrye.opentracing.SmallRyeRestClientListener;
 import io.smallrye.opentracing.ResteasyClientTracingRegistrarProvider;
 import io.smallrye.opentracing.TracerProducer;
 import io.smallrye.opentracing.ServletContextTracingInstaller;
@@ -10,6 +13,7 @@ import javax.enterprise.inject.spi.Extension;
 import javax.servlet.ServletContainerInitializer;
 import javax.ws.rs.ext.Providers;
 import org.eclipse.microprofile.opentracing.ClientTracingRegistrarProvider;
+import org.eclipse.microprofile.rest.client.spi.RestClientListener;
 import org.jboss.arquillian.container.test.spi.client.deployment.ApplicationArchiveProcessor;
 import org.jboss.arquillian.test.spi.TestClass;
 import org.jboss.shrinkwrap.api.Archive;
@@ -32,6 +36,10 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
       extensionsJar.addClass(ExceptionMapper.class);
       extensionsJar.addAsServiceProvider(ClientTracingRegistrarProvider.class, ResteasyClientTracingRegistrarProvider.class);
       extensionsJar.addClasses(ResteasyClientTracingRegistrarProvider.class);
+      extensionsJar.addAsServiceProvider(RestClientListener.class, SmallRyeRestClientListener.class);
+      extensionsJar.addClass(SmallRyeRestClientListener.class);
+      extensionsJar.addClass(OpenTracingAsyncInterceptorFactory.class);
+      extensionsJar.addClass(OpenTracingAsyncInterceptor.class);
       extensionsJar.addPackages(true, "io.opentracing");
 
       // install CDI extensions
@@ -58,6 +66,7 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
           "org.eclipse.microprofile.opentracing:microprofile-opentracing-tck",
           "org.jboss.weld.servlet:weld-servlet-core",
           "io.smallrye:smallrye-config",
+          "io.smallrye:smallrye-rest-client",
       };
       File[] dependencies = Maven.resolver()
           .loadPomFromFile(new File("pom.xml"))

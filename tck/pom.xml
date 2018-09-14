@@ -18,10 +18,18 @@
       <groupId>io.smallrye</groupId>
       <artifactId>smallrye-config</artifactId>
     </dependency>
+    <dependency>
+      <groupId>io.smallrye</groupId>
+      <artifactId>smallrye-rest-client</artifactId>
+    </dependency>
 
     <dependency>
       <groupId>org.eclipse.microprofile.opentracing</groupId>
       <artifactId>microprofile-opentracing-tck</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.microprofile.opentracing</groupId>
+      <artifactId>microprofile-opentracing-tck-rest-client</artifactId>
     </dependency>
     <dependency>
       <groupId>io.opentracing</groupId>
@@ -84,6 +92,7 @@
           </suiteXmlFiles>
           <dependenciesToScan>
             <dependency>org.eclipse.microprofile.opentracing:microprofile-opentracing-tck</dependency>
+            <dependency>org.eclipse.microprofile.opentracing:microprofile-opentracing-tck-rest-client</dependency>
           </dependenciesToScan>
         </configuration>
       </plugin>

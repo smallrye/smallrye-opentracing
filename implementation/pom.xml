@@ -19,6 +19,11 @@
       <artifactId>microprofile-config-api</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.eclipse.microprofile.rest.client</groupId>
+      <artifactId>microprofile-rest-client-api</artifactId>
+      <version>${version.smallrye.rest.client}</version>
+    </dependency>
+    <dependency>
       <groupId>io.opentracing</groupId>
       <artifactId>opentracing-api</artifactId>
     </dependency>
