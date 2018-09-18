@@ -26,7 +26,7 @@
     <dependency>
       <groupId>io.opentracing.contrib</groupId>
       <artifactId>opentracing-jaxrs2</artifactId>
-      <version>${verion.opentracing.jaxrs}</version>
+      <version>${version.opentracing.jaxrs}</version>
     </dependency>
 
     <dependency>

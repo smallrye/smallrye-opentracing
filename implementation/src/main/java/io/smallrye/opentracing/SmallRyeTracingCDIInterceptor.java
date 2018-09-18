@@ -35,7 +35,7 @@ public class SmallRyeTracingCDIInterceptor {
             .startActive(true);
       }
       return ctx.proceed();
-    } catch (Exception ex) {
+    } catch (Throwable ex) {
       if (scope != null) {
         logException(scope.span(), ex);
       }
@@ -91,7 +91,7 @@ public class SmallRyeTracingCDIInterceptor {
     return String.format("%s.%s", method.getDeclaringClass().getName(), method.getName());
   }
 
-  protected void logException(Span span, Exception ex) {
+  protected void logException(Span span, Throwable ex) {
     Map<String, Object> errorLogs = new HashMap<>();
     errorLogs.put("event", Tags.ERROR.getKey());
     errorLogs.put("error.object", ex);

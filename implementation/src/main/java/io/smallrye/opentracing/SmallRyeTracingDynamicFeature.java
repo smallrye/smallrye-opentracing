@@ -39,10 +39,10 @@ public class SmallRyeTracingDynamicFeature implements DynamicFeature {
       builder.withSkipPattern(skipPattern.get());
     }
     if (operationNameProvider.isPresent()) {
-       if ("http-path".equals(operationNameProvider.get())) {
+       if ("http-path".equalsIgnoreCase(operationNameProvider.get())) {
          builder.withOperationNameProvider(WildcardOperationName.newBuilder());
-       } else if (!"class-method".equals(operationNameProvider.get())) {
-          logger.warning("Using unknown span operation name provider");
+       } else if (!"class-method".equalsIgnoreCase(operationNameProvider.get())) {
+          logger.warning("Provided operation name does not match http-path or class-method. Using default class-method.");
       }
     }
     this.delegate = builder.build();
