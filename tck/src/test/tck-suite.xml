@@ -7,7 +7,7 @@
 
     <classes>
       <class
-        name="org.eclipse.microprofile.opentracing.tck.OpentracingClientTests">
+        name="org.eclipse.microprofile.opentracing.tck.OpenTracingClientBaseTests">
         <methods>
           <!-- TODO remove - https://github.com/smallrye/smallrye-opentracing/issues/5 -->
           <exclude name="testAsyncLocalSpan" />

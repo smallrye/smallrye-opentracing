@@ -56,7 +56,8 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
           "org.jboss.resteasy:resteasy-cdi",
           "org.jboss.resteasy:resteasy-jaxb-provider",
           "org.eclipse.microprofile.opentracing:microprofile-opentracing-tck",
-          "org.jboss.weld.servlet:weld-servlet-core"
+          "org.jboss.weld.servlet:weld-servlet-core",
+          "io.smallrye:smallrye-config",
       };
       File[] dependencies = Maven.resolver()
           .loadPomFromFile(new File("pom.xml"))

@@ -1,8 +1,12 @@
 package io.smallrye.opentracing;
 
 import io.opentracing.Scope;
+import io.opentracing.Span;
 import io.opentracing.Tracer;
+import io.opentracing.tag.Tags;
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 import javax.annotation.Priority;
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
@@ -24,16 +28,21 @@ public class SmallRyeTracingCDIInterceptor {
 
   @AroundInvoke
   public Object interceptTraced(InvocationContext ctx) throws Exception {
-    Scope activeScope = null;
+    Scope scope = null;
     try {
       if (!isJaxRs(ctx.getMethod()) && isTraced(ctx.getMethod())) {
-        activeScope = tracer.buildSpan(getOperationName(ctx.getMethod()))
+        scope = tracer.buildSpan(getOperationName(ctx.getMethod()))
             .startActive(true);
       }
       return ctx.proceed();
+    } catch (Throwable ex) {
+      if (scope != null) {
+        logException(scope.span(), ex);
+      }
+      throw ex;
     } finally {
-      if (activeScope != null) {
-        activeScope.close();
+      if (scope != null) {
+        scope.close();
       }
     }
   }
@@ -80,5 +89,13 @@ public class SmallRyeTracingCDIInterceptor {
       return classTraced.operationName();
     }
     return String.format("%s.%s", method.getDeclaringClass().getName(), method.getName());
+  }
+
+  protected void logException(Span span, Throwable ex) {
+    Map<String, Object> errorLogs = new HashMap<>();
+    errorLogs.put("event", Tags.ERROR.getKey());
+    errorLogs.put("error.object", ex);
+    span.log(errorLogs);
+    Tags.ERROR.set(span, true);
   }
 }

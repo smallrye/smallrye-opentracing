@@ -15,6 +15,10 @@
       <artifactId>microprofile-opentracing-api</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.eclipse.microprofile.config</groupId>
+      <artifactId>microprofile-config-api</artifactId>
+    </dependency>
+    <dependency>
       <groupId>io.opentracing</groupId>
       <artifactId>opentracing-api</artifactId>
     </dependency>
@@ -22,7 +26,7 @@
     <dependency>
       <groupId>io.opentracing.contrib</groupId>
       <artifactId>opentracing-jaxrs2</artifactId>
-      <version>${verion.opentracing.jaxrs}</version>
+      <version>${version.opentracing.jaxrs}</version>
     </dependency>
 
     <dependency>
