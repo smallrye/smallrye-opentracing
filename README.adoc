@@ -61,3 +61,11 @@ mvn clean install
 ```
 
 Debug can be enabled in `arquillian.xml` configuration file.
+
+
+== Release
+
+The release process is done automatically via CI integration. For more information see link:https://groups.google.com/forum/#!topic/smallrye/Ct4-k3L-JbA[Release process].
+Before releasing make sure that the current version in `pom.xml` matches specification version.
+To update the version run `mvn --batch-mode release:update-versions -DdevelopmentVersion=1.2.0-SNAPSHOT`.
+Now the artifact can be release for specification version `1.2`.
