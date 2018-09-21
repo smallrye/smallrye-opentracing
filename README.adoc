@@ -46,8 +46,8 @@ Client side tracing usually requires more components, for example OpenTracing-aw
 
 === CDI
 
-CDI tracing implementation is provided in `SmallRyeTracingCDIInterceptor`.
-This class can be loaded via vendor specific `javax.enterprise.inject.spi.Extension` implementation.
+The `@Traced` aspects of the specification is provided by the `OpenTracingInterceptor`, from the
+link:https://github.com/opentracing-contrib/java-interceptors[OpenTracing Contrib Java Interceptors] project.
 
 === Tracer producer
 
