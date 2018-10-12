@@ -24,7 +24,7 @@ public class ServletContextTracingInstaller implements ServletContextListener {
 
     // Span finishing filter
     Tracer tracer = CDI.current().select(Tracer.class).get();
-    Dynamic filterRegistration = servletContext.addFilter("tracingFilter", new SpanFinishingFilter(tracer));
+    Dynamic filterRegistration = servletContext.addFilter("tracingFilter", new SpanFinishingFilter());
     filterRegistration.setAsyncSupported(true);
     filterRegistration.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class),
   true, "*");
