@@ -33,7 +33,7 @@
     <version.resteasy>3.0.24.Final</version.resteasy>
     <version.weld>2.4.7.Final</version.weld>
     <version.wildfly>13.0.0.Final</version.wildfly>
-    <version.arquillian>1.4.0.Final</version.arquillian>
+    <version.arquillian>1.4.1.Final</version.arquillian>
     <version.arquillian.wildfly>2.1.0.Final</version.arquillian.wildfly>
   </properties>
 
