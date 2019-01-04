@@ -3,6 +3,7 @@ image:https://img.shields.io/github/license/smallrye/smallrye-opentracing.svg["L
 
 = SmallRye OpenTracing
 
+
 SmallRye OpenTracing is an implementation of https://github.com/eclipse/microprofile-opentracing meant
 to be reusable for different vendors.
 
