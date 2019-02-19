@@ -36,7 +36,7 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
       extensionsJar.addClass(ExceptionMapper.class);
       extensionsJar.addAsServiceProvider(ClientTracingRegistrarProvider.class, ResteasyClientTracingRegistrarProvider.class);
       extensionsJar.addClasses(ResteasyClientTracingRegistrarProvider.class);
-      extensionsJar.addAsServiceProvider(RestClientListener.class, SmallRyeRestClientListener.class);
+//      extensionsJar.addAsServiceProvider(RestClientListener.class, SmallRyeRestClientListener.class);
       extensionsJar.addClass(SmallRyeRestClientListener.class);
       extensionsJar.addClass(OpenTracingAsyncInterceptorFactory.class);
       extensionsJar.addClass(OpenTracingAsyncInterceptor.class);
