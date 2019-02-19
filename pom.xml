@@ -27,7 +27,7 @@
     <version.microprofile.config>1.3</version.microprofile.config>
     <version.smallrye.config>1.3.5</version.smallrye.config>
     <version.opentracing>0.31.0</version.opentracing>
-    <version.opentracing.jaxrs>0.3.1</version.opentracing.jaxrs>
+    <version.opentracing.jaxrs>0.4.1</version.opentracing.jaxrs>
     <version.opentracing.interceptors>0.0.4</version.opentracing.interceptors>
     <version.javax.ws.rs-api>2.1.1</version.javax.ws.rs-api>
     <version.resteasy>3.6.2.Final</version.resteasy>
