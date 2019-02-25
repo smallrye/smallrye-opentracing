@@ -32,7 +32,7 @@
     <version.opentracing.interceptors>0.0.4</version.opentracing.interceptors>
     <version.javax.ws.rs-api>2.1.1</version.javax.ws.rs-api>
     <version.resteasy>3.6.3.Final</version.resteasy>
-    <version.weld>2.4.7.Final</version.weld>
+    <version.weld>3.1.0.Final</version.weld>
     <version.wildfly>13.0.0.Final</version.wildfly>
     <version.arquillian>1.4.1.Final</version.arquillian>
     <version.arquillian.wildfly>2.1.1.Final</version.arquillian.wildfly>
