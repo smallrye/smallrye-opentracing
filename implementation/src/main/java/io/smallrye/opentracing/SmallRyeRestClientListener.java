@@ -19,7 +19,12 @@ public class SmallRyeRestClientListener implements RestClientListener {
       return;
     }
 
-    Tracer tracer = CDI.current().select(Tracer.class).get();
+    Tracer tracer;
+    try {
+      tracer = CDI.current().select(Tracer.class).get();
+    } catch (IllegalStateException e) {
+      return;
+    }
     restClientBuilder.register(new SmallRyeClientTracingFeature(tracer));
     restClientBuilder.register(new OpenTracingAsyncInterceptorFactory(tracer));
   }
