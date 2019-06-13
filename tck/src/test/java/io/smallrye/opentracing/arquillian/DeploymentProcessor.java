@@ -65,7 +65,7 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
           "org.jboss.resteasy:resteasy-jaxb-provider",
           "org.eclipse.microprofile.opentracing:microprofile-opentracing-tck",
           "org.jboss.weld.servlet:weld-servlet-core",
-          "io.smallrye:smallrye-config",
+          "io.smallrye:smallrye-config-1.3",
           "io.smallrye:smallrye-rest-client",
       };
       File[] dependencies = Maven.resolver()
