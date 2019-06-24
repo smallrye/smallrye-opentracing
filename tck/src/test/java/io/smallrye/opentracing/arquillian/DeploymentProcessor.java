@@ -64,12 +64,13 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
 
             String[] deps = {
                     "io.smallrye:smallrye-opentracing-1.3",
+                    "org.jboss.resteasy:resteasy-client-microprofile",
+                    "org.jboss.resteasy:resteasy-client",
                     "org.jboss.resteasy:resteasy-cdi",
                     "org.jboss.resteasy:resteasy-jaxb-provider",
                     "org.eclipse.microprofile.opentracing:microprofile-opentracing-tck",
                     "org.jboss.weld.servlet:weld-servlet-core",
                     "io.smallrye:smallrye-config-1.3",
-                    "io.smallrye:smallrye-rest-client",
             };
             File[] dependencies = Maven.resolver()
                     .loadPomFromFile(new File("pom.xml"))
