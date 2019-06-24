@@ -1,11 +1,12 @@
 package io.smallrye.opentracing;
 
-import io.opentracing.Tracer;
-import io.opentracing.mock.MockTracer;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
 import javax.inject.Singleton;
+
+import io.opentracing.Tracer;
+import io.opentracing.mock.MockTracer;
 
 /**
  * @author Pavol Loffay
@@ -13,10 +14,10 @@ import javax.inject.Singleton;
 @ApplicationScoped
 public class TracerProducer {
 
-  @Default
-  @Produces
-  @Singleton
-  public Tracer tracer() {
-    return new MockTracer();
-  }
+    @Default
+    @Produces
+    @Singleton
+    public Tracer tracer() {
+        return new MockTracer();
+    }
 }

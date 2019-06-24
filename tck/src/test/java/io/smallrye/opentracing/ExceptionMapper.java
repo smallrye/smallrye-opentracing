@@ -13,9 +13,8 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<RuntimeException> {
 
-  @Override
-  public Response toResponse(RuntimeException exception) {
-    return Response.status(Status.INTERNAL_SERVER_ERROR).build();
-  }
+    @Override
+    public Response toResponse(RuntimeException exception) {
+        return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+    }
 }
-
