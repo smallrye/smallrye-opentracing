@@ -4,15 +4,5 @@
     <packages>
       <package name="org.eclipse.microprofile.opentracing.tck.*" />
     </packages>
-
-    <classes>
-      <class
-        name="org.eclipse.microprofile.opentracing.tck.OpenTracingClientBaseTests">
-        <methods>
-          <!-- TODO remove - https://github.com/smallrye/smallrye-opentracing/issues/5 -->
-          <exclude name="testAsyncLocalSpan" />
-        </methods>
-      </class>
-    </classes>
   </test>
 </suite>
