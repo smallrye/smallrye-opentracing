@@ -68,6 +68,7 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
                     "org.jboss.resteasy:resteasy-client",
                     "org.jboss.resteasy:resteasy-cdi",
                     "org.jboss.resteasy:resteasy-jaxb-provider",
+                    "org.jboss.resteasy:resteasy-json-binding-provider",
                     "org.eclipse.microprofile.opentracing:microprofile-opentracing-tck",
                     "org.jboss.weld.servlet:weld-servlet-core",
                     "io.smallrye:smallrye-config",

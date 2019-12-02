@@ -12,7 +12,7 @@
   <url>http://smallrye.io</url>
 
   <properties>
-    <version.microprofile.opentracing>1.3.1</version.microprofile.opentracing>
+    <version.microprofile.opentracing>1.3.2-SNAPSHOT</version.microprofile.opentracing>
     <version.microprofile.config>1.3</version.microprofile.config>
     <version.microprofile.restclient>1.3.4</version.microprofile.restclient>
     <version.smallrye.config>1.4.0</version.smallrye.config>

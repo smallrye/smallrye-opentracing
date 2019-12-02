@@ -56,6 +56,12 @@
       <artifactId>resteasy-jaxb-provider</artifactId>
       <version>${version.resteasy}</version>
     </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-json-binding-provider</artifactId>
+      <version>${version.resteasy}</version>
+    </dependency>
+
 
     <dependency>
       <groupId>org.jboss.arquillian.testng</groupId>
