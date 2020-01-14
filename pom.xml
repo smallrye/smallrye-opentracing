@@ -15,6 +15,7 @@
     <version.microprofile.opentracing>1.3.1</version.microprofile.opentracing>
     <version.microprofile.config>1.3</version.microprofile.config>
     <version.microprofile.restclient>1.3.4</version.microprofile.restclient>
+    <version.microprofile.contextpropagation>1.0.2</version.microprofile.contextpropagation>
     <version.smallrye.config>1.5.0</version.smallrye.config>
     <version.opentracing>0.31.0</version.opentracing>
     <version.opentracing.jaxrs>0.4.1</version.opentracing.jaxrs>
@@ -81,6 +82,11 @@
         <groupId>org.eclipse.microprofile.rest.client</groupId>
         <artifactId>microprofile-rest-client-api</artifactId>
         <version>${version.microprofile.restclient}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.microprofile.context-propagation</groupId>
+        <artifactId>microprofile-context-propagation-api</artifactId>
+        <version>${version.microprofile.contextpropagation}</version>
       </dependency>
 
       <dependency>
