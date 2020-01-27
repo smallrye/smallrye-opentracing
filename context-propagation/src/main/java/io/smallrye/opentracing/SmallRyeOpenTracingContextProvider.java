@@ -32,7 +32,10 @@ public class SmallRyeOpenTracingContextProvider implements ThreadContextProvider
 
     @Override
     public ThreadContextSnapshot clearedContext(Map<String, String> props) {
+        Tracer activeTracer = GlobalTracer.get();
+
         return () -> () -> {
+            activeTracer.scopeManager().activate(null, false);
         };
     }
 
