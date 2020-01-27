@@ -18,14 +18,9 @@ public class SmallRyeOpenTracingContextProvider implements ThreadContextProvider
         Span activeSpan = activeTracer.activeSpan();
 
         return () -> {
-            if (activeSpan != null) {
-                Scope s = activeTracer.scopeManager().activate(activeSpan, false);
-                return () -> {
-                    s.close();
-                };
-            }
-
+            Scope s = activeTracer.scopeManager().activate(activeSpan, false);
             return () -> {
+                s.close();
             };
         };
     }
