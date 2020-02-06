@@ -81,6 +81,12 @@
         <groupId>org.eclipse.microprofile.rest.client</groupId>
         <artifactId>microprofile-rest-client-api</artifactId>
         <version>${version.microprofile.restclient}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
 
       <dependency>
