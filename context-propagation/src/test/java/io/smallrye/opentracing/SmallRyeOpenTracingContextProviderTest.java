@@ -14,7 +14,7 @@ import io.opentracing.util.GlobalTracer;
 
 class SmallRyeOpenTracingContextProviderTest {
 
-    private static final String OPENTRACING_CONTEXT = "OPENTRACING_CONTEXT";
+    private static final String OPENTRACING_CONTEXT = "OPENTRACING";
 
     @BeforeAll
     static void setUpBeforeAll() {
