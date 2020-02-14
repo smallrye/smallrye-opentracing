@@ -63,11 +63,14 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
             war.addAsServiceProvider(BeanArchiveHandler.class, SmallRyeBeanArchiveHandler.class);
 
             String[] deps = {
+                    "io.opentracing:opentracing-api",
+                    "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider",
                     "io.smallrye:smallrye-opentracing",
                     "org.jboss.resteasy:resteasy-client-microprofile",
                     "org.jboss.resteasy:resteasy-client",
                     "org.jboss.resteasy:resteasy-cdi",
                     "org.jboss.resteasy:resteasy-jaxb-provider",
+                    "org.jboss.resteasy:resteasy-jackson2-provider",
                     "org.jboss.weld.servlet:weld-servlet-core",
                     "io.smallrye.config:smallrye-config",
             };
