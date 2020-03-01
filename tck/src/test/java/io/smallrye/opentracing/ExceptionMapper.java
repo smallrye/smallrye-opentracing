@@ -15,6 +15,6 @@ public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<RuntimeE
 
     @Override
     public Response toResponse(RuntimeException exception) {
-        return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+        return Response.status(Status.INTERNAL_SERVER_ERROR).entity(exception.getMessage()).build();
     }
 }
