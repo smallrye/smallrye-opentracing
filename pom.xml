@@ -19,7 +19,7 @@
     <version.opentracing>0.31.0</version.opentracing>
     <version.opentracing.jaxrs>0.4.1</version.opentracing.jaxrs>
     <version.opentracing.interceptors>0.0.4</version.opentracing.interceptors>
-    <version.resteasy>3.8.1.Final</version.resteasy>
+    <version.resteasy>3.11.2.Final</version.resteasy>
 
     <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/tck/target/site/jacoco-aggregate/jacoco.xml,${project.basedir}/../tck/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
