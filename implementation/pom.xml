@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>smallrye-opentracing</artifactId>
+  <name>SmallRye: MicroProfile OpenTracing Implementation</name>
 
   <dependencies>
     <dependency>
