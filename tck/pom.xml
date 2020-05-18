@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>smallrye-opentracing-tck</artifactId>
+  <name>SmallRye: MicroProfile OpenTracing TCK</name>
 
   <dependencies>
     <dependency>

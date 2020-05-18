@@ -1,6 +1,10 @@
-image:https://semaphoreci.com/api/v1/smallrye/smallrye-opentracing/branches/master/badge.svg["Semaphore CI", link="https://semaphoreci.com/smallrye/smallrye-opentracing"]
-image:https://sonarcloud.io/api/project_badges/measure?project=smallrye_smallrye-opentracing&metric=alert_status["Quality Gate Status", link="https://sonarcloud.io/dashboard?id=smallrye_smallrye-opentracing"]
+:ci: https://github.com/smallrye/smallrye-opentracing/actions?query=workflow%3A%22SmallRye+Build%22
+:sonar: https://sonarcloud.io/dashboard?id=smallrye_smallrye-opentracing
+
+image:https://github.com/smallrye/smallrye-opentracing/workflows/SmallRye%20Build/badge.svg?branch=master[link={ci}]
+image:https://sonarcloud.io/api/project_badges/measure?project=smallrye_smallrye-opentracing&metric=alert_status["Quality Gate Status", link={sonar}]
 image:https://img.shields.io/github/license/smallrye/smallrye-opentracing.svg["License", link="http://www.apache.org/licenses/LICENSE-2.0"]
+image:https://img.shields.io/maven-central/v/io.smallrye/smallrye-opentracing?color=green[]
 
 = SmallRye OpenTracing
 
@@ -73,10 +77,3 @@ Run the following to debug tests on port `8788`.
 ```bash
 mvn -Dmaven.surefire.debug="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8788 -Xnoagent -Djava.compiler=NONE" test
 ```
-
-== Release
-
-The release process is done automatically via CI integration. For more information see link:https://groups.google.com/forum/#!topic/smallrye/Ct4-k3L-JbA[Release process].
-Before releasing make sure that the current version in `pom.xml` matches specification version.
-To update the version run `mvn --batch-mode release:update-versions -DdevelopmentVersion=1.2.0-SNAPSHOT`.
-Now the artifact can be release for specification version `1.2`.
