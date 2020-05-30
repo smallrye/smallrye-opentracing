@@ -1,0 +1,4 @@
+name: SmallRye OpenTracing
+release:
+  current-version: 1.3.5-SNAPSHOT
+  next-version: 1.3.6-SNAPSHOT

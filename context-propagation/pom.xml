@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>smallrye-opentracing-context-propagation</artifactId>
+  <name>SmallRye: MicroProfile OpenTracing Context Propagation</name>
 
   <dependencies>
     <dependency>
@@ -37,11 +38,11 @@
     <dependency>
       <groupId>io.smallrye</groupId>
       <artifactId>smallrye-context-propagation</artifactId>
-      <version>1.0.11</version>
+      <version>1.0.13</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>io.smallrye</groupId>
+      <groupId>io.smallrye.config</groupId>
       <artifactId>smallrye-config</artifactId>
       <version>${version.smallrye.config}</version>
       <scope>test</scope>
