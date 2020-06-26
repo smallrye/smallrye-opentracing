@@ -1,12 +1,11 @@
 package io.smallrye.opentracing;
 
-import javax.enterprise.inject.spi.CDI;
-
 import org.eclipse.microprofile.opentracing.Traced;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 import org.eclipse.microprofile.rest.client.spi.RestClientListener;
 
 import io.opentracing.Tracer;
+import io.opentracing.util.GlobalTracer;
 
 /**
  * @author Pavol Loffay
@@ -21,7 +20,7 @@ public class SmallRyeRestClientListener implements RestClientListener {
             return;
         }
 
-        Tracer tracer = CDI.current().select(Tracer.class).get();
+        Tracer tracer = GlobalTracer.get();
         restClientBuilder.register(new SmallRyeClientTracingFeature(tracer));
         restClientBuilder.register(new OpenTracingAsyncInterceptorFactory(tracer));
     }

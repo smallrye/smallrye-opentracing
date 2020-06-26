@@ -7,6 +7,7 @@ import javax.inject.Singleton;
 
 import io.opentracing.Tracer;
 import io.opentracing.mock.MockTracer;
+import io.opentracing.util.GlobalTracer;
 
 /**
  * @author Pavol Loffay
@@ -18,6 +19,8 @@ public class TracerProducer {
     @Produces
     @Singleton
     public Tracer tracer() {
-        return new MockTracer();
+        MockTracer tracer = new MockTracer();
+        GlobalTracer.register(tracer);
+        return tracer;
     }
 }
