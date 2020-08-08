@@ -34,7 +34,7 @@ public class OpenTracingAsyncInterceptor implements AsyncInvocationInterceptor {
             countDownLatch.await();
         } catch (InterruptedException e) {
         }
-        scope = tracer.scopeManager().activate(span, false);
+        scope = tracer.scopeManager().activate(span);
     }
 
     @Override

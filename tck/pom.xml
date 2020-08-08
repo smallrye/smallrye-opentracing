@@ -54,20 +54,8 @@
     </dependency>
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-jaxb-provider</artifactId>
+      <artifactId>resteasy-json-binding-provider</artifactId>
       <version>${version.resteasy}</version>
-    </dependency>
-    <!-- TODO - We should remove Jackson and use Jsonb. We need https://github.com/eclipse/microprofile-opentracing/issues/184 fixed first
-     -->
-    <dependency>
-      <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-jackson2-provider</artifactId>
-      <version>${version.resteasy}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.jaxrs</groupId>
-      <artifactId>jackson-jaxrs-json-provider</artifactId>
-      <version>2.11.2</version>
     </dependency>
 
     <dependency>
