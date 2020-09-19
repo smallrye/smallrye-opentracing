@@ -1,7 +1,6 @@
 package io.smallrye.opentracing;
 
 import java.util.Optional;
-import java.util.logging.Logger;
 
 import javax.enterprise.inject.Instance;
 import javax.enterprise.inject.spi.CDI;
@@ -25,8 +24,6 @@ import io.opentracing.contrib.jaxrs2.server.ServerTracingDynamicFeature.Builder;
 @Provider
 public class SmallRyeTracingDynamicFeature implements DynamicFeature {
 
-    private static final Logger logger = Logger.getLogger(SmallRyeTracingDynamicFeature.class.getName());
-
     private final ServerTracingDynamicFeature delegate;
 
     public SmallRyeTracingDynamicFeature() {
@@ -46,7 +43,7 @@ public class SmallRyeTracingDynamicFeature implements DynamicFeature {
             if ("http-path".equalsIgnoreCase(operationNameProvider.get())) {
                 builder.withOperationNameProvider(WildcardOperationName.newBuilder());
             } else if (!"class-method".equalsIgnoreCase(operationNameProvider.get())) {
-                logger.warning("Provided operation name does not match http-path or class-method. Using default class-method.");
+                SmallRyeLogging.log.operationNameNotMatch();
             }
         }
         this.delegate = builder.build();
