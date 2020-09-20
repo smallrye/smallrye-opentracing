@@ -5,7 +5,7 @@ import org.jboss.logging.annotations.LogMessage;
 import org.jboss.logging.annotations.Message;
 import org.jboss.logging.annotations.MessageLogger;
 
-@MessageLogger(projectCode = "SRMET", length = 5)
+@MessageLogger(projectCode = "SROPT", length = 5)
 public interface SmallRyeLogging {
 
     SmallRyeLogging log = Logger.getMessageLogger(SmallRyeLogging.class, SmallRyeLogging.class.getPackage().getName());
