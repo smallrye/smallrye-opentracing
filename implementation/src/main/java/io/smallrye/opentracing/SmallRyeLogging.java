@@ -13,4 +13,8 @@ public interface SmallRyeLogging {
     @LogMessage(level = Logger.Level.WARN)
     @Message(id = 1000, value = "Provided operation name does not match http-path or class-method. Using default class-method.")
     void operationNameNotMatch();
+
+    @LogMessage(level = Logger.Level.INFO)
+    @Message(id = 1001, value = "Registering Tracer CDI producer")
+    void registeringTracerCDIProducer();
 }
