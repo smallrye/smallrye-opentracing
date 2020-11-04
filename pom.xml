@@ -14,7 +14,7 @@
 
   <properties>
     <version.microprofile.opentracing>2.0-RC2</version.microprofile.opentracing>
-    <version.microprofile.config>2.0-M1</version.microprofile.config>
+    <version.microprofile.config>2.0-RC5</version.microprofile.config>
     <version.microprofile.restclient>2.0-RC2</version.microprofile.restclient>
     <version.smallrye.config>1.8.6</version.smallrye.config>
     <version.opentracing>0.33.0</version.opentracing>
