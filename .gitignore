@@ -34,3 +34,7 @@ hs_err_pid*
 # Intellij Idea
 *.iml
 .idea/
+
+# Zanata files
+**/.zanata-cache/
+.cache
