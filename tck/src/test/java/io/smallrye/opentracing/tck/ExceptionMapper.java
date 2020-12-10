@@ -1,4 +1,4 @@
-package io.smallrye.opentracing;
+package io.smallrye.opentracing.tck;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;

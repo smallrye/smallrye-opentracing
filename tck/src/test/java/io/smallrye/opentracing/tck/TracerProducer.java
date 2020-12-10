@@ -1,4 +1,4 @@
-package io.smallrye.opentracing;
+package io.smallrye.opentracing.tck;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Default;

@@ -35,6 +35,5 @@ hs_err_pid*
 *.iml
 .idea/
 
-# Zanata files
-**/.zanata-cache/
+# formatter cache directories
 .cache

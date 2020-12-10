@@ -1,3 +1,4 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="MicroProfile OpenTracing TCKs" verbose="1" preserve-order="true" configfailurepolicy="continue" >
 
   <test name="microprofile-opentracing TCK">
