@@ -27,18 +27,7 @@
 
     <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/tck/target/site/jacoco-aggregate/jacoco.xml,${project.basedir}/../tck/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
-
-  <repositories>
-    <repository>
-      <id>opentracing-20-staging</id>
-      <url>https://oss.sonatype.org/content/repositories/orgeclipsemicroprofile-1397/</url>
-    </repository>
-    <repository>
-      <id>rest-client-20-staging</id>
-      <url>https://oss.sonatype.org/content/repositories/orgeclipsemicroprofile-1385/</url>
-    </repository>
-  </repositories>
-
+  
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
