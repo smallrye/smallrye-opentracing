@@ -168,7 +168,7 @@
         <argLine>@{jacocoArgLine}</argLine>
         <!--suppress UnresolvedMavenProperty -->
         <sonar.coverage.jacoco.xmlReportPaths>
-          ${maven.multiModuleProjectDirectory}/coverage/target/site/jacoco-aggregate/jacoco.xml
+          ${maven.multiModuleProjectDirectory}/tck/target/site/jacoco-aggregate/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
       </properties>
       <build>
