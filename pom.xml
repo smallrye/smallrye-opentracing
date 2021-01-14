@@ -24,7 +24,7 @@
     <!-- Test -->
     <version.arquillian.jetty>1.0.0.CR3</version.arquillian.jetty>
     <version.jetty>9.4.32.v20200930</version.jetty>
-    <version.resteasy>4.6.0-SNAPSHOT</version.resteasy>
+    <version.resteasy>4.6.0.Final</version.resteasy>
   </properties>
   
   <licenses>
