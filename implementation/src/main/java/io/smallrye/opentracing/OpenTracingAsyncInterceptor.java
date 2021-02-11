@@ -34,11 +34,15 @@ public class OpenTracingAsyncInterceptor implements AsyncInvocationInterceptor {
             countDownLatch.await();
         } catch (InterruptedException e) {
         }
-        scope = tracer.scopeManager().activate(span);
+        if (span != null) {
+            scope = tracer.scopeManager().activate(span);
+        }
     }
 
     @Override
     public void removeContext() {
-        scope.close();
+        if (scope != null) {
+            scope.close();
+        }
     }
 }
