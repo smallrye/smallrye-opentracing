@@ -23,7 +23,7 @@
 
     <!-- Test -->
     <version.arquillian.jetty>1.0.0.CR3</version.arquillian.jetty>
-    <version.jetty>9.4.35.v20201120</version.jetty>
+    <version.jetty>9.4.37.v20210219</version.jetty>
     <version.resteasy>4.6.0.Final</version.resteasy>
   </properties>
   
