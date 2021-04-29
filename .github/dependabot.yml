@@ -1,0 +1,37 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: io.smallrye.config:smallrye-config
+    versions:
+    - "> 1.8.6, < 2"
+  - dependency-name: org.eclipse.jetty:jetty-bom
+    versions:
+    - ">= 10.a, < 11"
+  - dependency-name: org.eclipse.jetty:jetty-bom
+    versions:
+    - ">= 11.a, < 12"
+  - dependency-name: org.jboss.resteasy:resteasy-cdi
+    versions:
+    - "> 3.13.1.Final, < 4"
+  - dependency-name: org.jboss.resteasy:resteasy-client
+    versions:
+    - "> 3.13.1.Final, < 4"
+  - dependency-name: org.jboss.resteasy:resteasy-client-microprofile
+    versions:
+    - "> 3.13.1.Final, < 4"
+  - dependency-name: org.jboss.resteasy:resteasy-jaxrs
+    versions:
+    - "> 3.13.1.Final, < 4"
+  - dependency-name: org.jboss.resteasy:resteasy-json-binding-provider
+    versions:
+    - "> 3.13.1.Final, < 4"
+  - dependency-name: org.eclipse.jetty:jetty-bom
+    versions:
+    - 9.4.36.v20210114
+    - 9.4.37.v20210219
+    - 9.4.39.v20210325
