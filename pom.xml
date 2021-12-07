@@ -15,7 +15,7 @@
   <properties>
     <version.microprofile.opentracing>2.0</version.microprofile.opentracing>
     <version.microprofile.config>2.0</version.microprofile.config>
-    <version.microprofile.restclient>2.0</version.microprofile.restclient>
+    <version.microprofile.restclient>3.0</version.microprofile.restclient>
 
     <version.opentracing>0.33.0</version.opentracing>
     <version.opentracing.jaxrs>1.0.0</version.opentracing.jaxrs>
