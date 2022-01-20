@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>smallrye-opentracing-parent</artifactId>
     <groupId>io.smallrye</groupId>
+    <artifactId>smallrye-opentracing-parent</artifactId>
     <version>2.0.2-SNAPSHOT</version>
   </parent>
 
@@ -30,7 +30,7 @@
 
     <dependency>
       <groupId>org.jboss.arquillian.container</groupId>
-      <artifactId>arquillian-jetty-embedded-9</artifactId>
+      <artifactId>${artifactId.arquillian.jetty}</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -69,8 +69,14 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-client-microprofile</artifactId>
+      <groupId>io.smallrye.config</groupId>
+      <artifactId>smallrye-config</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${groupId.resteasy.client}</groupId>
+      <artifactId>${artifactId.resteasy.client}</artifactId>
+      <version>${version.resteasy.client}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

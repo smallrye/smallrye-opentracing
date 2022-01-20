@@ -4,7 +4,7 @@ import javax.ws.rs.core.Feature;
 import javax.ws.rs.core.FeatureContext;
 
 import io.opentracing.Tracer;
-import io.opentracing.contrib.jaxrs2.client.ClientTracingFeature;
+import io.smallrye.opentracing.contrib.jaxrs2.client.ClientTracingFeature;
 
 /**
  * @author Pavol Loffay
