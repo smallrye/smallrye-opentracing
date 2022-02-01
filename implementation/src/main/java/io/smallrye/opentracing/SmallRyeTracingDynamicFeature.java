@@ -13,10 +13,10 @@ import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;
 
 import io.opentracing.Tracer;
-import io.opentracing.contrib.jaxrs2.server.OperationNameProvider.ClassNameOperationName;
-import io.opentracing.contrib.jaxrs2.server.OperationNameProvider.WildcardOperationName;
-import io.opentracing.contrib.jaxrs2.server.ServerTracingDynamicFeature;
-import io.opentracing.contrib.jaxrs2.server.ServerTracingDynamicFeature.Builder;
+import io.smallrye.opentracing.contrib.jaxrs2.server.OperationNameProvider.ClassNameOperationName;
+import io.smallrye.opentracing.contrib.jaxrs2.server.OperationNameProvider.WildcardOperationName;
+import io.smallrye.opentracing.contrib.jaxrs2.server.ServerTracingDynamicFeature;
+import io.smallrye.opentracing.contrib.jaxrs2.server.ServerTracingDynamicFeature.Builder;
 
 /**
  * @author Pavol Loffay

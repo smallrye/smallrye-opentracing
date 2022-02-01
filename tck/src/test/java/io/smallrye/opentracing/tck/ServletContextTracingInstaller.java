@@ -9,8 +9,8 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-import io.opentracing.contrib.jaxrs2.server.SpanFinishingFilter;
 import io.smallrye.opentracing.SmallRyeTracingDynamicFeature;
+import io.smallrye.opentracing.contrib.jaxrs2.server.SpanFinishingFilter;
 
 /**
  * @author Pavol Loffay
