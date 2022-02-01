@@ -75,13 +75,13 @@ final class PriorityComparator implements Comparator<Object> {
             return UNDEFINED_PRIORITY;
         Class<?> type = value instanceof Class ? (Class<?>) value : value.getClass();
         // Don't import Priority. Loading the PriorityComparator class would fail if Priority isn't there at runtime!
-        javax.annotation.Priority priority = type.getAnnotation(javax.annotation.Priority.class);
+        jakarta.annotation.Priority priority = type.getAnnotation(jakarta.annotation.Priority.class);
         return priority != null ? priority.value() : priorityOf(type.getSuperclass());
     }
 
     private static boolean isPriorityAnnotationAvailable() {
         try {
-            return Class.forName("javax.annotation.Priority") != null;
+            return Class.forName("jakarta.annotation.Priority") != null;
         } catch (ClassNotFoundException cnfe) {
             return false;
         } catch (LinkageError le) {

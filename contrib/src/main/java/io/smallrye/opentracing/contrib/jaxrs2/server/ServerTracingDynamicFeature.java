@@ -21,10 +21,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
-import javax.ws.rs.Priorities;
-import javax.ws.rs.container.DynamicFeature;
-import javax.ws.rs.container.ResourceInfo;
-import javax.ws.rs.core.FeatureContext;
+import jakarta.ws.rs.Priorities;
+import jakarta.ws.rs.container.DynamicFeature;
+import jakarta.ws.rs.container.ResourceInfo;
+import jakarta.ws.rs.core.FeatureContext;
 
 import org.eclipse.microprofile.opentracing.Traced;
 
@@ -48,7 +48,7 @@ public class ServerTracingDynamicFeature implements DynamicFeature {
 
     /**
      * When using this constructor application has to call {@link GlobalTracer#register} to register
-     * tracer instance. Ideally it should be called in {@link javax.servlet.ServletContextListener}.
+     * tracer instance. Ideally it should be called in {@link jakarta.servlet.ServletContextListener}.
      *
      * For a custom configuration use {@link Builder#build()}.
      */
@@ -238,7 +238,7 @@ public class ServerTracingDynamicFeature implements DynamicFeature {
 
         /**
          * @return server tracing dynamic feature. This feature should be manually registered to
-         *         {@link javax.ws.rs.core.Application}
+         *         {@link jakarta.ws.rs.core.Application}
          */
         public ServerTracingDynamicFeature build() {
             return new ServerTracingDynamicFeature(this);
