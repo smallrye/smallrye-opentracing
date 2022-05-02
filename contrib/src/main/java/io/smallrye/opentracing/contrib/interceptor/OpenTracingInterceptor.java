@@ -159,7 +159,14 @@ public class OpenTracingInterceptor {
         } else if (classTraced != null && classTraced.operationName().length() > 0) {
             return classTraced.operationName();
         }
-        return String.format("%s.%s", method.getDeclaringClass().getName(), method.getName());
+
+        // use a StringBuilder with predefined capacity to compute the operation name for performance reason
+        String className = method.getDeclaringClass().getName();
+        String methodName = method.getName();
+        int capacity = className.length() + methodName.length() + 1;
+        StringBuilder builder = new StringBuilder(capacity);
+        builder.append(className).append('.').append(methodName);
+        return builder.toString();
     }
 
     private void logException(Span span, Exception e) {
