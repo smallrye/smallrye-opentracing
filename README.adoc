@@ -6,7 +6,12 @@ image:https://sonarcloud.io/api/project_badges/measure?project=smallrye_smallrye
 image:https://img.shields.io/github/license/smallrye/smallrye-opentracing.svg["License", link="http://www.apache.org/licenses/LICENSE-2.0"]
 image:https://img.shields.io/maven-central/v/io.smallrye/smallrye-opentracing?color=green[]
 
-= SmallRye OpenTracing
+= SmallRye OpenTracing (Deprecated)
+
+OpenTracing is no longer under development and was replaced by OpenTelemetry Tracing. In the future,
+please refer to the OpenTelemetry Quarkus extension: https://quarkus.io/guides/opentelemetry
+
+___
 
 SmallRye OpenTracing is an implementation of https://github.com/eclipse/microprofile-opentracing meant
 to be reusable for different vendors.
