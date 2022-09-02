@@ -15,7 +15,7 @@
  */
 package io.smallrye.opentracing.contrib.jaxrs2.serialization;
 
-import javax.ws.rs.ext.InterceptorContext;
+import jakarta.ws.rs.ext.InterceptorContext;
 
 import io.opentracing.Span;
 

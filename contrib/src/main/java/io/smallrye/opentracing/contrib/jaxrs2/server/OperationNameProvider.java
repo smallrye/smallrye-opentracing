@@ -19,8 +19,8 @@ import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-import javax.ws.rs.Path;
-import javax.ws.rs.container.ContainerRequestContext;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.container.ContainerRequestContext;
 
 /**
  * @author Pavol Loffay

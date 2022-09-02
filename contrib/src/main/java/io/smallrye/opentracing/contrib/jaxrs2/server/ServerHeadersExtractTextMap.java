@@ -18,7 +18,7 @@ package io.smallrye.opentracing.contrib.jaxrs2.server;
 import java.util.Iterator;
 import java.util.Map;
 
-import javax.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.MultivaluedMap;
 
 import io.opentracing.propagation.TextMap;
 import io.smallrye.opentracing.contrib.web.servlet.filter.HttpServletRequestExtractAdapter;

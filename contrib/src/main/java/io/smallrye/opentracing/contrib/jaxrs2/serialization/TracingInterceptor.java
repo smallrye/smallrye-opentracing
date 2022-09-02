@@ -21,12 +21,12 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.ext.InterceptorContext;
-import javax.ws.rs.ext.ReaderInterceptor;
-import javax.ws.rs.ext.ReaderInterceptorContext;
-import javax.ws.rs.ext.WriterInterceptor;
-import javax.ws.rs.ext.WriterInterceptorContext;
+import jakarta.ws.rs.WebApplicationException;
+import jakarta.ws.rs.ext.InterceptorContext;
+import jakarta.ws.rs.ext.ReaderInterceptor;
+import jakarta.ws.rs.ext.ReaderInterceptorContext;
+import jakarta.ws.rs.ext.WriterInterceptor;
+import jakarta.ws.rs.ext.WriterInterceptorContext;
 
 import io.opentracing.References;
 import io.opentracing.Scope;
