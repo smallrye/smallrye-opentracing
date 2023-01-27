@@ -11,7 +11,7 @@ mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.nextMa
 
 mvn versions:update-property -Dproperty=version.microprofile.opentracing -DnewVersion=[3.0] -N
 mvn versions:update-property -Dproperty=version.microprofile.config -DnewVersion=[3.0] -N
-mvn versions:update-property -Dproperty=version.microprofile.restclient -DnewVersionx§=[3.0] -N
+mvn versions:update-property -Dproperty=version.microprofile.restclient -DnewVersion=[3.0] -N
 mvn versions:update-property -Dproperty=version.jakarta.servlet -DnewVersion=[5.0.0] -N
 mvn versions:set-property -Dproperty=artifactId.arquillian.jetty -DnewVersion=arquillian-jetty-embedded-11 -N
 mvn versions:set-property -Dproperty=version.arquillian.jetty -DnewVersion=1.0.0.CR4 -N
