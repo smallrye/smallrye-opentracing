@@ -9,15 +9,14 @@ find . -path "*/src/main/resources/META-INF/services/javax*" | sed -e 'p;s/javax
 
 mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.nextMajorVersion}.0.0-SNAPSHOT
 
-mvn versions:update-property -Dproperty=version.microprofile.opentracing -DnewVersion=[3.0] -N
-mvn versions:update-property -Dproperty=version.microprofile.config -DnewVersion=[3.0] -N
-mvn versions:update-property -Dproperty=version.microprofile.restclient -DnewVersion=[3.0] -N
-mvn versions:update-property -Dproperty=version.jakarta.servlet -DnewVersion=[5.0.0] -N
-mvn versions:set-property -Dproperty=artifactId.arquillian.jetty -DnewVersion=arquillian-jetty-embedded-11 -N
-mvn versions:set-property -Dproperty=version.arquillian.jetty -DnewVersion=1.0.0.CR4 -N
-mvn versions:update-property -Dproperty=version.jetty -DnewVersion=[11.0.7] -N
-mvn versions:update-property -Dproperty=version.resteasy -DnewVersion=[6.0.0.Final] -N
-mvn versions:update-property -Dproperty=version.smallrye.config -DnewVersion=[3.0.0] -N
-mvn versions:set-property -Dproperty=groupId.resteasy.client -DnewVersion=org.jboss.resteasy.microprofile -N
-mvn versions:set-property -Dproperty=artifactId.resteasy.client -DnewVersion=microprofile-rest-client -N
-mvn versions:set-property -Dproperty=version.resteasy.client -DnewVersion=2.0.0.Beta1 -N
+mvn -ntp versions:set-property -Dproperty=version.microprofile.opentracing -DnewVersion=3.0 -N
+mvn -ntp versions:set-property -Dproperty=version.microprofile.config -DnewVersion=3.0 -N
+mvn -ntp versions:set-property -Dproperty=version.microprofile.restclient -DnewVersion=3.0 -N
+mvn -ntp versions:set-property -Dproperty=version.jakarta.servlet -DnewVersion=5.0.0 -N
+
+mvn -ntp versions:set-property -Dproperty=version.smallrye.testing -DnewVersion=2.2.0
+mvn -ntp versions:set-property -Dproperty=version.smallrye.config -DnewVersion=3.1.1
+mvn -ntp versions:set-property -Dproperty=version.resteasy -DnewVersion=6.0.3.Final
+mvn -ntp versions:set-property -Dproperty=groupId.resteasy.client -DnewVersion=org.jboss.resteasy.microprofile
+mvn -ntp versions:set-property -Dproperty=artifactId.resteasy.client -DnewVersion=microprofile-rest-client
+mvn -ntp versions:set-property -Dproperty=version.resteasy.client -DnewVersion=2.0.0.Final
