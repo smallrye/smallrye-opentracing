@@ -19,9 +19,9 @@ import static io.smallrye.opentracing.contrib.jaxrs2.internal.SpanWrapper.PROPER
 
 import java.util.List;
 
-import javax.annotation.Priority;
-import javax.ws.rs.Priorities;
-import javax.ws.rs.ext.InterceptorContext;
+import jakarta.annotation.Priority;
+import jakarta.ws.rs.Priorities;
+import jakarta.ws.rs.ext.InterceptorContext;
 
 import io.opentracing.Tracer;
 import io.smallrye.opentracing.contrib.jaxrs2.internal.CastUtils;

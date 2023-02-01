@@ -20,12 +20,12 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.AsyncEvent;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.AsyncEvent;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import io.opentracing.Span;
 import io.opentracing.tag.Tags;
@@ -39,7 +39,7 @@ import io.opentracing.tag.Tags;
 public interface ServletFilterSpanDecorator {
 
     /**
-     * Decorate span before {@link javax.servlet.Filter#doFilter(ServletRequest, ServletResponse, FilterChain)} is
+     * Decorate span before {@link jakarta.servlet.Filter#doFilter(ServletRequest, ServletResponse, FilterChain)} is
      * called. This is called right after span in created. Span is already present in request attributes with name
      * {@link TracingFilter#SERVER_SPAN_CONTEXT}.
      *
@@ -49,8 +49,8 @@ public interface ServletFilterSpanDecorator {
     void onRequest(HttpServletRequest httpServletRequest, Span span);
 
     /**
-     * Decorate span after {@link javax.servlet.Filter#doFilter(ServletRequest, ServletResponse, FilterChain)}. When it
-     * is an async request this will be called in {@link javax.servlet.AsyncListener#onComplete(AsyncEvent)}.
+     * Decorate span after {@link jakarta.servlet.Filter#doFilter(ServletRequest, ServletResponse, FilterChain)}. When it
+     * is an async request this will be called in {@link jakarta.servlet.AsyncListener#onComplete(AsyncEvent)}.
      *
      * @param httpServletRequest request
      * @param httpServletResponse response
@@ -60,8 +60,8 @@ public interface ServletFilterSpanDecorator {
 
     /**
      * Decorate span when an exception is thrown during processing in
-     * {@link javax.servlet.Filter#doFilter(ServletRequest, ServletResponse, FilterChain)}. This is
-     * also called in {@link javax.servlet.AsyncListener#onError(AsyncEvent)}.
+     * {@link jakarta.servlet.Filter#doFilter(ServletRequest, ServletResponse, FilterChain)}. This is
+     * also called in {@link jakarta.servlet.AsyncListener#onError(AsyncEvent)}.
      *
      * @param httpServletRequest request
      * @param exception exception
@@ -72,7 +72,7 @@ public interface ServletFilterSpanDecorator {
 
     /**
      * Decorate span on asynchronous request timeout. It is called in
-     * {@link javax.servlet.AsyncListener#onTimeout(AsyncEvent)}.
+     * {@link jakarta.servlet.AsyncListener#onTimeout(AsyncEvent)}.
      *
      * @param httpServletRequest request
      * @param httpServletResponse response
@@ -85,7 +85,7 @@ public interface ServletFilterSpanDecorator {
     /**
      * Adds standard tags to span. {@link Tags#HTTP_URL}, {@link Tags#HTTP_STATUS}, {@link Tags#HTTP_METHOD} and
      * {@link Tags#COMPONENT}. If an exception during
-     * {@link javax.servlet.Filter#doFilter(ServletRequest, ServletResponse, FilterChain)} is thrown tag
+     * {@link jakarta.servlet.Filter#doFilter(ServletRequest, ServletResponse, FilterChain)} is thrown tag
      * {@link Tags#ERROR} is added and {@link Tags#HTTP_STATUS} not because at this point it is not known.
      */
     ServletFilterSpanDecorator STANDARD_TAGS = new ServletFilterSpanDecorator() {

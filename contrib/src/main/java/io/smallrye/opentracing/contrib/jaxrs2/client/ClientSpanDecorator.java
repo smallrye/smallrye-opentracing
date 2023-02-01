@@ -15,8 +15,8 @@
  */
 package io.smallrye.opentracing.contrib.jaxrs2.client;
 
-import javax.ws.rs.client.ClientRequestContext;
-import javax.ws.rs.client.ClientResponseContext;
+import jakarta.ws.rs.client.ClientRequestContext;
+import jakarta.ws.rs.client.ClientResponseContext;
 
 import io.opentracing.Span;
 import io.opentracing.tag.Tags;
