@@ -113,6 +113,13 @@
             <dependency>org.eclipse.microprofile.opentracing:microprofile-opentracing-tck-rest-client</dependency>
           </dependenciesToScan>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-testng</artifactId>
+            <version>${version.surefire.plugin}</version>
+          </dependency>
+        </dependencies>
       </plugin>
 
       <plugin>
