@@ -7,7 +7,7 @@ find . -type f -name '*.java' -exec sed -i '' 's/javax./jakarta./g' {} +
 # service loader files
 find . -path "*/src/main/resources/META-INF/services/javax*" | sed -e 'p;s/javax/jakarta/g' | xargs -n2 git mv
 
-mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.nextMajorVersion}.0.0-SNAPSHOT
+mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.nextMajorVersion}.0.1-SNAPSHOT
 
 mvn -ntp versions:set-property -Dproperty=version.microprofile.opentracing -DnewVersion=3.0 -N
 mvn -ntp versions:set-property -Dproperty=version.microprofile.config -DnewVersion=3.0 -N
