@@ -12,7 +12,7 @@
 
   <properties>
     <version.smallrye.testing>1.2.0</version.smallrye.testing>
-    <version.smallrye.config>2.13.1</version.smallrye.config>
+    <version.smallrye.config>2.13.2</version.smallrye.config>
     <version.resteasy>4.7.7.Final</version.resteasy>
     <!-- RESTEasy REST Client relocated to another GAV, so these props are for jakarta auto migration -->
     <groupId.resteasy.client>org.jboss.resteasy</groupId.resteasy.client>
