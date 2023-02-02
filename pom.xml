@@ -7,7 +7,7 @@
     </parent>
 
   <artifactId>smallrye-opentracing-parent</artifactId>
-  <version>3.0.1-SNAPSHOT</version>
+  <version>3.0.3</version>
   <packaging>pom</packaging>
   <name>SmallRye: MicroProfile OpenTracing Parent</name>
   <url>http://smallrye.io</url>
@@ -38,7 +38,7 @@
     <connection>scm:git:git@github.com:smallrye/smallrye-opentracing</connection>
     <developerConnection>scm:git:git@github.com:smallrye/smallrye-opentracing</developerConnection>
     <url>https://github.com/smallrye/smallrye-opentracing/</url>
-    <tag>HEAD</tag>
+    <tag>3.0.3</tag>
   </scm>
 
   <dependencyManagement>
