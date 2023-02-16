@@ -93,7 +93,7 @@ public abstract class TracingInterceptor implements WriterInterceptor, ReaderInt
      * <li>Deserialization happens between the span in the server filter is started and finished so we can use child_of.</li>
      * <li>Serialization of response entity happens after the server span if finished so we can use only follows_from.</li>
      * </ul>
-     * 
+     *
      * @param context Used to retrieve the current span wrapper created by the jax-rs request filter.
      * @param operationName "serialize" or "deserialize" depending on the context
      * @return a noop span is no span context is registered in the context. Otherwise a new span related to the current on

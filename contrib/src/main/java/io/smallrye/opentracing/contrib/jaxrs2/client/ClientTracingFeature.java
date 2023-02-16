@@ -95,7 +95,7 @@ public class ClientTracingFeature implements Feature {
 
         /**
          * Set span decorators.
-         * 
+         *
          * @return builder
          */
         public Builder withDecorators(List<ClientSpanDecorator> spanDecorators) {
@@ -105,7 +105,7 @@ public class ClientTracingFeature implements Feature {
 
         /**
          * Set serialization span decorators.
-         * 
+         *
          * @return builder
          */
         public Builder withSerializationDecorators(List<InterceptorSpanDecorator> spanDecorators) {

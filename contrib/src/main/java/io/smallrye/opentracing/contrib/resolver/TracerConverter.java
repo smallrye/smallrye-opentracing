@@ -23,7 +23,7 @@ import io.opentracing.Tracer;
  * Function converting an existing {@link Tracer}.
  * <p>
  * This can be useful for <em>wrapping</em> tracers:
- * 
+ *
  * <pre>
  * <code>
  * public final class FooWrapperConverter implements TracerConverter {

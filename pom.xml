@@ -2,8 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.smallrye</groupId>
-        <artifactId>smallrye-jakarta-parent</artifactId>
-        <version>38</version>
+        <artifactId>smallrye-parent</artifactId>
+        <version>39</version>
     </parent>
 
   <artifactId>smallrye-opentracing-parent</artifactId>
@@ -16,7 +16,7 @@
     <version.microprofile.opentracing>3.0</version.microprofile.opentracing>
     <version.microprofile.config>3.0</version.microprofile.config>
     <version.microprofile.restclient>3.0</version.microprofile.restclient>
-    <version.jakarta.servlet>5.0.0</version.jakarta.servlet>
+    <version.jakarta.servlet>6.0.0</version.jakarta.servlet>
 
     <version.opentracing>0.33.0</version.opentracing>
     <version.opentracing.concurrent>0.4.0</version.opentracing.concurrent>

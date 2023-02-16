@@ -38,7 +38,7 @@ public class ServletFilterHeaderSpanDecorator implements ServletFilterSpanDecora
 
     /**
      * Constructor of ServletFilterHeaderSpanDecorator with a default prefix of "http.header."
-     * 
+     *
      * @param allowedHeaders list of {@link HeaderEntry} to extract from the incoming request
      */
     public ServletFilterHeaderSpanDecorator(List<HeaderEntry> allowedHeaders) {
@@ -47,7 +47,7 @@ public class ServletFilterHeaderSpanDecorator implements ServletFilterSpanDecora
 
     /**
      * Constructor of ServletFilterHeaderSpanDecorator
-     * 
+     *
      * @param allowedHeaders list of {@link HeaderEntry} to extract from the incoming request
      * @param prefix the prefix to prepend on each @{@link StringTag}. Can be null is not prefix is desired
      */
