@@ -59,7 +59,7 @@ import io.opentracing.util.GlobalTracer;
  * </pre>
  *
  * Or include filter in web.xml and:
- * 
+ *
  * <pre>
  * {@code
  *  GlobalTracer.register(tracer);

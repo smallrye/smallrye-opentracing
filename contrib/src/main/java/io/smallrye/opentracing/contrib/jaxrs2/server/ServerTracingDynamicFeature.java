@@ -142,7 +142,7 @@ public class ServerTracingDynamicFeature implements DynamicFeature {
 
         /**
          * Only resources annotated with {@link Traced} will be traced.
-         * 
+         *
          * @return builder
          */
         public Builder withTraceNothing() {
@@ -152,7 +152,7 @@ public class ServerTracingDynamicFeature implements DynamicFeature {
 
         /**
          * Set span decorators.
-         * 
+         *
          * @param spanDecorators span decorator
          * @return builder
          */
@@ -163,7 +163,7 @@ public class ServerTracingDynamicFeature implements DynamicFeature {
 
         /**
          * Set serialization span decorators.
-         * 
+         *
          * @return builder
          */
         public Builder withSerializationDecorators(List<InterceptorSpanDecorator> spanDecorators) {

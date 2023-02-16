@@ -183,7 +183,7 @@ public abstract class TracerResolver {
 
     /**
      * Attempts to load a Tracer based on the {@link TracerFactory} interface. This is the preferred way to load a tracer
-     * 
+     *
      * @param classloader The class loader to be used to load provider-configuration files
      *        and provider classes
      * @return a tracer as resolved by the classpath's TracerFactory, or null
@@ -228,7 +228,7 @@ public abstract class TracerResolver {
 
     /**
      * Attempts to load a Tracer directly from the ServiceLoader.
-     * 
+     *
      * @param classloader The class loader to be used to load provider-configuration files
      *        and provider classes
      * @return a tracer as resolved directly by the service loader, or null
