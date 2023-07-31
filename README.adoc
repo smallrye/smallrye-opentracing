@@ -9,7 +9,7 @@ image:https://img.shields.io/maven-central/v/io.smallrye/smallrye-opentracing?co
 = SmallRye OpenTracing (Deprecated)
 
 OpenTracing is no longer under development and was replaced by OpenTelemetry Tracing. In the future,
-please refer to the OpenTelemetry Quarkus extension: https://quarkus.io/guides/opentelemetry
+please refer to SmallRye OpenTelemetry: https://github.com/smallrye/smallrye-opentelemetry
 
 ___
 
