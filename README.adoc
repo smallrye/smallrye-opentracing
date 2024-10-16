@@ -1,8 +1,6 @@
-:ci: https://github.com/smallrye/smallrye-opentracing/actions?query=workflow%3A%22SmallRye+Build%22
-:sonar: https://sonarcloud.io/dashboard?id=smallrye_smallrye-opentracing
+:ci: https://github.com/smallrye/smallrye-opentracing/actions/workflows/build.yml/
 
-image:https://github.com/smallrye/smallrye-opentracing/workflows/SmallRye%20Build/badge.svg?branch=main[link={ci}]
-image:https://sonarcloud.io/api/project_badges/measure?project=smallrye_smallrye-opentracing&metric=alert_status["Quality Gate Status", link={sonar}]
+image:https://github.com/smallrye/smallrye-opentracing/actions/workflows/build.yml/badge.svg?branch=main[link={ci}]
 image:https://img.shields.io/github/license/smallrye/smallrye-opentracing.svg["License", link="http://www.apache.org/licenses/LICENSE-2.0"]
 image:https://img.shields.io/maven-central/v/io.smallrye/smallrye-opentracing?color=green[]
 
